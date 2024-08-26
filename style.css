@@ -1,0 +1,237 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    margin: 0;
+    background-color: #141414;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E50914;
+    border-radius: 4px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.header:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #E50914;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+/* Container Styles */
+.container {
+    padding-top: 100px; /* Increased top padding to account for fixed header */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Movie Section Styles */
+.movie {
+    margin-top: 30px; /* Reduced from 50px to tighten layout */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Reduced from 25px to tighten layout */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    transition: 250ms all;
+    padding: 20px 0;
+}
+
+/* Image Container Styles */
+.imageContainer {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.imageContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content Styles */
+.content {
+    display: none;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 4px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content-display {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content div {
+    margin: 10px;
+}
+
+#content-close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #E50914;
+    border-radius: 50%;
+    color: #E50914;
+    transition: all 0.3s ease;
+}
+
+#content-close:hover {
+    background-color: #E50914;
+    color: #fff;
+}
+
+
+
+/* Button Styles */
+.btn {
+    color: #fff;
+    background-color: #E50914;
+    border-color: #E50914;
+    outline: none;
+    margin-left: 650px;
+    min-height: 38px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.btn:hover {
+    background-color: #f40612;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 760px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #E50914;
+    outline: none;
+}
+
+/* Poster Styles */
+.poster {
+    width: 150px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    padding-left: 20px;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 640px) {
+    .form-control {
+        width: 100%;
+    }
+
+    .btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .poster {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .imageContainer {
+        width: 120px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
